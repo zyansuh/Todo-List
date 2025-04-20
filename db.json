@@ -1,0 +1,17 @@
+{
+    "todos": [
+      {
+        "id": 1,
+        "title": "Next.js 공부하기",
+        "completed": false,
+        "createdAt": "2025-04-20T10:00:00.000Z"
+      },
+      {
+        "id": 2,
+        "title": "운동하기",
+        "completed": true,
+        "createdAt": "2025-04-19T09:30:00.000Z"
+      }
+    ]
+  }
+  
