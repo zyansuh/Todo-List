@@ -53,10 +53,8 @@ src/
 
 1. 레포지토리 클론
 
-```bash
 git clone https://github.com/zyansuh/Todo-List.git
 cd Todo-List
-```
 
 2. 패키지 설치
 
