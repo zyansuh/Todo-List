@@ -35,7 +35,7 @@ src/
 ├── styles/
 │   └── global.css
 └── db.json                    # json-server를 위한 더미 데이터
-```
+
 
 ## ✅ 주요 기능
 
