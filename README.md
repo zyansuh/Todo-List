@@ -18,6 +18,7 @@ Next.js 기반의 간단하고 강력한 투두 리스트 애플리케이션입�
 ## 📁 프로젝트 구조
 
 ```
+
 src/
 ├── app/
 │   └── page.tsx               # 메인 페이지
@@ -36,6 +37,7 @@ src/
 ├── styles/
 │   └── global.css
 └── db.json                    # json-server를 위한 더미 데이터
+
 ```
 
 ## ✅ 주요 기능
