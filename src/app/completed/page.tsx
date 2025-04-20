@@ -1,4 +1,3 @@
-// src/app/completed/page.tsx
 import TodoList from '@/components/TodoList'
 import Link from 'next/link'
 
@@ -9,7 +8,6 @@ export default function CompletedPage() {
       <Link href="/" className="text-blue-500 underline text-sm">
         ← 돌아가기
       </Link>
-      <TodoList />
-    </main>
+      <TodoList /> 
   )
 }
