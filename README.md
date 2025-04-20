@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+좋아! 지금까지 진행한 걸 기반으로 깔끔한 `README.md` 예시 만들어줄게. 아래는 **Next.js 기반 투두 리스트 프로젝트**에 맞춘 기본 README 템플릿이야.
 
-## Getting Started
+---
 
-First, run the development server:
+```markdown
+# 📝 Todo-List
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Next.js 기반의 간단하고 강력한 투두 리스트 애플리케이션입니다.  
+할 일 추가, 수정, 삭제 기능은 물론 필터, 정렬, 다크모드, 애니메이션 등 다양한 기능을 제공합니다.
+
+## 🔧 사용 기술 스택
+
+- **Next.js**
+- **TypeScript**
+- **React Query**
+- **Zustand**
+- **Styled-Components**
+- **json-server** (Mock API)
+- **Framer Motion** (애니메이션)
+- **Lucide-react** (아이콘)
+
+## 📁 프로젝트 구조
+
+```
+src/
+├── app/
+│   └── page.tsx               # 메인 페이지
+├── components/                # 재사용 가능한 컴포넌트들
+│   ├── TodoForm.tsx
+│   ├── TodoItem.tsx
+│   ├── TodoList.tsx
+│   ├── FilterTabs.tsx
+│   └── ThemeToggle.tsx
+├── hooks/                     # 커스텀 훅
+│   └── useTodos.ts
+├── lib/                       # API 함수 모음
+│   └── api.ts
+├── types/                     # Type 정의
+│   └── todo.ts
+├── styles/
+│   └── global.css
+└── db.json                    # json-server를 위한 더미 데이터
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✅ 주요 기능
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [x] 투두 리스트 조회 (React Query)
+- [x] 새로운 할 일 추가
+- [x] 할 일 수정 / 삭제
+- [x] 완료 여부 토글
+- [x] 완료된 항목 필터링
+- [x] 다크모드 지원
+- [x] 날짜 추가 (Due Date)
+- [x] 애니메이션 효과
+- [x] 반응형 디자인 지원
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 실행 방법
 
-## Learn More
+1. 레포지토리 클론
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git clone https://github.com/zyansuh/Todo-List.git
+cd Todo-List
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. 패키지 설치
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+yarn
+# 또는
+npm install
+```
 
-## Deploy on Vercel
+3. json-server 실행 (다른 터미널에서)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npx json-server --watch db.json --port 4000
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. 개발 서버 실행
+
+```bash
+yarn dev
+# 또는
+npm run dev
+```
+
+5. 브라우저에서 확인
+
+```
+http://localhost:3000
+```
+
+## 📸 미리보기
+
+> (여기에 썸네일 이미지 첨부하면 좋아요!)
+> 예: `/public/thumbnail.png`
+
+## 🌐 배포
+
+- [Vercel 링크]() ← 배포 후 주소 추가 예정
+
+
+## 👤 개발자
+
+- **지안 서 (zyansuh)**
+- [GitHub 프로필](https://github.com/zyansuh)
