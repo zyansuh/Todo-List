@@ -58,29 +58,19 @@ cd Todo-List
 
 2. 패키지 설치
 
-```bash
 npm install
-```
 
 3. json-server 실행 (다른 터미널에서)
 
-```bash
 npx json-server --watch db.json --port 4000
-```
 
 4. 개발 서버 실행
 
-```bash
-yarn dev
-# 또는
 npm run dev
-```
 
 5. 브라우저에서 확인
 
-```
 http://localhost:3000
-```
 
 ## 🌐 배포
 
