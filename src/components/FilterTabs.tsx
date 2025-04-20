@@ -20,9 +20,12 @@ export default function FilterTabs() {
         <button
           key={filter}
           onClick={() => handleChange(filter)}
-          className={`px-3 py-1 rounded border ${
-            currentFilter === filter ? 'bg-blue-500 text-white' : 'bg-white'
+          className={`px-3 py-1 rounded border transition-all duration-200 ${
+            currentFilter === filter
+              ? 'bg-blue-500 text-white'
+              : 'bg-white hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600'
           }`}
+          
         >
           {filter === 'all' && '전체'}
           {filter === 'done' && '완료'}
