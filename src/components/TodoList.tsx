@@ -1,18 +1,13 @@
 'use client'
 
+import { useFilter } from '@/hooks/useFilter'
 import { useTodos } from '@/hooks/useTodos'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Todo } from '@/types/todo'
-import { useSearchParams, usePathname } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 
 export default function TodoList() {
   const { data: todos, isLoading, isError, editTodo, removeTodo } = useTodos()
-
-  const searchParams = useSearchParams()
-  const pathname = usePathname()
-
-  // ✅ filter 파악: URL 쿼리 or 경로 기반
-  const filter = searchParams.get('filter') || (pathname === '/completed' ? 'done' : 'all')
+  const filter = useFilter()
 
   if (isLoading) return <p>로딩 중...</p>
   if (isError) return <p>에러가 발생했습니다.</p>
