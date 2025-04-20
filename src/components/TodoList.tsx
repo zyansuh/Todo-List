@@ -32,6 +32,10 @@ export default function TodoList() {
           >
             {todo.title}
           </span>
+          <span className="text-sm text-gray-500 dark:text-gray-400">
+  {new Date(todo.createdAt).toLocaleDateString()}
+</span>
+
           <button
             onClick={() => removeTodo.mutate(todo.id)}
             className="text-red-500 hover:text-red-700"
