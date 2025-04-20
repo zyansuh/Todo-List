@@ -1,0 +1,34 @@
+'use client'
+
+import { useSearchParams, useRouter } from 'next/navigation'
+
+const filters = ['all', 'done', 'not-yet'] as const
+export type FilterType = (typeof filters)[number]
+
+export default function FilterTabs() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const currentFilter = searchParams.get('filter') || 'all'
+
+  const handleChange = (filter: FilterType) => {
+    router.push(`/?filter=${filter}`)
+  }
+
+  return (
+    <div className="flex gap-2 mb-4">
+      {filters.map((filter) => (
+        <button
+          key={filter}
+          onClick={() => handleChange(filter)}
+          className={`px-3 py-1 rounded border ${
+            currentFilter === filter ? 'bg-blue-500 text-white' : 'bg-white'
+          }`}
+        >
+          {filter === 'all' && '전체'}
+          {filter === 'done' && '완료'}
+          {filter === 'not-yet' && '미완료'}
+        </button>
+      ))}
+    </div>
+  )
+}

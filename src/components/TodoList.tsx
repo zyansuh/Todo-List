@@ -2,16 +2,24 @@
 
 import { useTodos } from '@/hooks/useTodos'
 import { Todo } from '@/types/todo'
+import { useSearchParams } from 'next/navigation'
 
 export default function TodoList() {
   const { data: todos, isLoading, isError, editTodo, removeTodo } = useTodos()
+  const filter = useSearchParams().get('filter') || 'all'
 
   if (isLoading) return <p>로딩 중...</p>
   if (isError) return <p>에러가 발생했습니다.</p>
 
+  const filtered = todos?.filter((todo: Todo) => {
+    if (filter === 'done') return todo.completed
+    if (filter === 'not-yet') return !todo.completed
+    return true
+  })
+
   return (
     <ul className="space-y-2">
-      {todos?.map((todo: Todo) => (
+      {filtered?.map((todo) => (
         <li
           key={todo.id}
           className="flex justify-between items-center p-3 border rounded bg-white"
