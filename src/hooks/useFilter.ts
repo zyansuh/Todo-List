@@ -1,6 +1,5 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export type FilterType = 'all' | 'done' | 'not-yet'
@@ -16,7 +15,7 @@ export const useFilter = (): FilterType => {
     } else {
       setFilter('all')
     }
-  }, [typeof window !== 'undefined' && window.location.search])
+  }, []) 
 
   return filter
 }
