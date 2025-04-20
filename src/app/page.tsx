@@ -5,6 +5,7 @@ import FilterTabs from '@/components/FilterTabs'
 import TodoForm from '@/components/TodoForm'
 import TodoList from '@/components/TodoList'
 import ThemeToggle from '@/components/ThemeToggle'
+import { Suspense } from 'react'
 
 export default function HomePage() {
   return (
@@ -13,7 +14,9 @@ export default function HomePage() {
       <ThemeToggle />
       <FilterTabs />
       <TodoForm />
-      <TodoList />
+      <Suspense fallback={<p>로딩 중...</p>}>
+        <TodoList />
+      </Suspense>
     </main>
   )
 }

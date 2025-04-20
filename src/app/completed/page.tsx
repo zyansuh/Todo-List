@@ -1,9 +1,9 @@
 'use client'
+export const dynamic = 'force-dynamic'
 
 import TodoList from '@/components/TodoList'
 import Link from 'next/link'
-
-export const dynamic = 'force-dynamic'
+import { Suspense } from 'react'
 
 export default function CompletedPage() {
   return (
@@ -12,7 +12,9 @@ export default function CompletedPage() {
       <Link href="/" className="text-blue-500 underline text-sm mb-2 inline-block">
         ← 돌아가기
       </Link>
-      <TodoList />
+      <Suspense fallback={<p>로딩 중...</p>}>
+        <TodoList />
+      </Suspense>
     </main>
   )
 }
