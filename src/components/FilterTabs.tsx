@@ -1,17 +1,28 @@
 'use client'
 
-import { useSearchParams, useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 const filters = ['all', 'done', 'not-yet'] as const
 export type FilterType = (typeof filters)[number]
 
 export default function FilterTabs() {
   const router = useRouter()
-  const searchParams = useSearchParams()
-  const currentFilter = searchParams.get('filter') || 'all'
+  const [currentFilter, setCurrentFilter] = useState<FilterType>('all')
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const filter = params.get('filter') as FilterType
+    if (filters.includes(filter)) {
+      setCurrentFilter(filter)
+    } else {
+      setCurrentFilter('all')
+    }
+  }, [typeof window !== 'undefined' && window.location.search])
 
   const handleChange = (filter: FilterType) => {
     router.push(`/?filter=${filter}`)
+    setCurrentFilter(filter)
   }
 
   return (
@@ -25,7 +36,6 @@ export default function FilterTabs() {
               ? 'bg-blue-500 text-white'
               : 'bg-white hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600'
           }`}
-          
         >
           {filter === 'all' && '전체'}
           {filter === 'done' && '완료'}
