@@ -3,6 +3,8 @@
 import TodoList from '@/components/TodoList'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+
 export default function CompletedPage() {
   return (
     <main className="p-6 max-w-xl mx-auto">
