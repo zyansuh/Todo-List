@@ -1,5 +1,6 @@
 'use client'
 export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
 
 import FilterTabs from '@/components/FilterTabs'
 import TodoForm from '@/components/TodoForm'
