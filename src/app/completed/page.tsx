@@ -1,3 +1,5 @@
+'use client'
+
 import TodoList from '@/components/TodoList'
 import Link from 'next/link'
 
