@@ -1,26 +1,39 @@
-```markdown
-# 📝 Todo-List
+<div align="center">
+  <h1>📝 Todo-List</h1>
+  <p>Next.js 기반의 심플하고 강력한 투두 리스트 애플리케이션</p>
+</div>
 
-Next.js 기반의 간단하고 강력한 투두 리스트 애플리케이션입니다.  
-할 일 추가, 수정, 삭제 기능은 물론 필터, 정렬, 다크모드, 애니메이션 등 다양한 기능을 제공합니다.
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/Zustand-000000?style=for-the-badge&logo=Zustand&logoColor=white">
+  <img src="https://img.shields.io/badge/Styled--Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
+  <img src="https://img.shields.io/badge/React Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white">
+  <img src="https://img.shields.io/badge/Framer Motion-EF007B?style=for-the-badge&logo=framer&logoColor=white">
+</div>
 
-## 🔧 사용 기술 스택
+---
 
-- **Next.js**
-- **TypeScript**
-- **React Query**
-- **Zustand**
-- **Styled-Components**
-- **json-server** (Mock API)
-- **Framer Motion** (애니메이션)
-- **Lucide-react** (아이콘)
+## 🔥 주요 기능
 
-## 📁 프로젝트 구조
+- ✅ 투두 항목 조회 / 추가 / 삭제 / 수정
+- ✅ 완료 여부 토글
+- ✅ 완료/미완료 필터링
+- ✅ 날짜(기한) 기능
+- ✅ 다크 모드 지원
+- ✅ 애니메이션 적용
+- ✅ 반응형 UI 디자인
+- ✅ json-server 기반 Mock API
 
+---
+
+## 📂 폴더 구조
+
+```
 src/
 ├── app/
 │   └── page.tsx               # 메인 페이지
-├── components/                # 재사용 가능한 컴포넌트들
+├── components/                # UI 컴포넌트들
 │   ├── TodoForm.tsx
 │   ├── TodoItem.tsx
 │   ├── TodoList.tsx
@@ -28,56 +41,75 @@ src/
 │   └── ThemeToggle.tsx
 ├── hooks/                     # 커스텀 훅
 │   └── useTodos.ts
-├── lib/                       # API 함수 모음
+├── lib/                       # API 호출
 │   └── api.ts
 ├── types/                     # Type 정의
 │   └── todo.ts
 ├── styles/
 │   └── global.css
-└── db.json                    # json-server를 위한 더미 데이터
+└── db.json                    # json-server 용 데이터
+```
 
+---
 
-## ✅ 주요 기능
-
-- [x] 투두 리스트 조회 (React Query)
-- [x] 새로운 할 일 추가
-- [x] 할 일 수정 / 삭제
-- [x] 완료 여부 토글
-- [x] 완료된 항목 필터링
-- [x] 다크모드 지원
-- [x] 날짜 추가 (Due Date)
-- [x] 애니메이션 효과
-- [x] 반응형 디자인 지원
-
-## 🚀 실행 방법
+## ⚙️ 실행 방법
 
 1. 레포지토리 클론
 
+```bash
 git clone https://github.com/zyansuh/Todo-List.git
 cd Todo-List
+```
 
 2. 패키지 설치
 
+```bash
 npm install
+```
 
-3. json-server 실행 (다른 터미널에서)
+3. json-server 실행
 
+```bash
 npx json-server --watch db.json --port 4000
+```
 
 4. 개발 서버 실행
 
+```bash
 npm run dev
+```
 
 5. 브라우저에서 확인
 
+```
 http://localhost:3000
+```
 
-## 🌐 배포
+---
 
-https://todo-list-bice-two-76.vercel.app/
+## 📚 STACKS
 
+<div align=center> 
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"> 
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/Zustand-000000?style=for-the-badge&logo=Zustand&logoColor=white">
+  <img src="https://img.shields.io/badge/ReactQuery-FF4154?style=for-the-badge&logo=reactquery&logoColor=white">
+  <img src="https://img.shields.io/badge/StyledComponents-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
+  <img src="https://img.shields.io/badge/FramerMotion-EF007B?style=for-the-badge&logo=framer&logoColor=white">
+  <img src="https://img.shields.io/badge/json--server-000000?style=for-the-badge&logo=JSON&logoColor=white">
+</div>
 
-## 👤 개발자
+---
 
-- **지안 서 (zyansuh)**
-- [GitHub 프로필](https://github.com/zyansuh)
+## 🌐 배포 링크
+
+👉 [https://todo-list-bice-two-76.vercel.app](https://todo-list-bice-two-76.vercel.app)
+
+---
+
+## 👤 만든 사람
+
+**지안 서 (zyansuh)**  
+[🔗 GitHub 프로필](https://github.com/zyansuh)
+```
